@@ -1,16 +1,17 @@
 import { Form, Input, Button, message } from "antd";
+import React, {useState} from 'react'
 import { SendOutlined } from "@ant-design/icons";
 import { motion } from "framer-motion";
 
 const { TextArea } = Input;
 
-const [loading, setLoading] = useState(false);
+
 
 const ContactSection = () => {
   const [form] = Form.useForm();
 
 
-
+const [loading, setLoading] = useState(false);
     const onFinish = async (values) => {
       setLoading(true);
     try {
