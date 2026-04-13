@@ -4,12 +4,36 @@ import { motion } from "framer-motion";
 
 const { TextArea } = Input;
 
+const [loading, setLoading] = useState(false);
+
 const ContactSection = () => {
   const [form] = Form.useForm();
 
-  const onFinish = () => {
-    message.success("Thanks for reaching out! I'll get back to you soon 🎉");
-    form.resetFields();
+
+
+    const onFinish = async (values) => {
+      setLoading(true);
+    try {
+      
+      const response = await fetch("https://69d8eeca0576c938825a45ff.mockapi.io/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+
+      if (response.ok) {
+        
+        message.success("Thanks for reaching out! Your info is sending to Hoa 🎉");
+        
+        
+        form.resetFields();
+      } else {
+        throw new Error("Failed to save");
+      }
+    } catch (error) {
+      message.error("Error");
+      console.error(error);
+    }
   };
 
   return (
@@ -61,6 +85,7 @@ const ContactSection = () => {
                 type="primary"
                 htmlType="submit"
                 icon={<SendOutlined />}
+                loading={loading}
                 block
                 style={{
                   borderRadius: 999,

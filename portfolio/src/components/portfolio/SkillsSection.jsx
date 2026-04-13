@@ -5,13 +5,13 @@ const skills = [
   { name: "ReactJS", color: "#0891b2" },
   { name: "Ant Design", color: "#1677ff" },
   { name: "JavaScript", color: "#eab308" },
-  { name: "Tailwind CSS", color: "#06b6d4" },
   { name: "Git", color: "#f97316" },
   { name: "JSON Server", color: "#22c55e" },
   { name: "HTML5", color: "#e34c26" },
   { name: "CSS3", color: "#264de4" },
   { name: "English (B1)", color: "#8b5cf6" },
-  { name: "Network Security", color: "#ec4899" },
+  { name: "Team Collaboration", color: "#ec4899" },
+  { name: "Problem Solving", color: "#06b6d4" },
 ];
 
 const SkillsSection = () => {
