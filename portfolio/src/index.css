@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 230 25% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 230 25% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 25% 18%;
+
+    --primary: 174 72% 44%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 258 60% 58%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 20% 94%;
+    --muted-foreground: 220 10% 50%;
+
+    --accent: 220 90% 56%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 174 72% 44%;
+
+    --radius: 1rem;
+
+    --font-display: 'Baloo 2', cursive;
+    --font-body: 'Nunito', sans-serif;
+
+    --gradient-hero: linear-gradient(135deg, hsl(174 72% 44%), hsl(220 90% 56%), hsl(258 60% 58%));
+    --gradient-blob-1: linear-gradient(135deg, hsl(174 72% 44% / 0.3), hsl(258 60% 58% / 0.2));
+    --gradient-blob-2: linear-gradient(135deg, hsl(258 60% 58% / 0.3), hsl(220 90% 56% / 0.2));
+    --shadow-card: 0 8px 32px hsl(230 25% 18% / 0.08);
+    --shadow-card-hover: 0 16px 48px hsl(174 72% 44% / 0.15);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .blob-1 {
+    background: var(--gradient-blob-1);
+    width: 400px;
+    height: 400px;
+  }
+
+  .blob-2 {
+    background: var(--gradient-blob-2);
+    width: 300px;
+    height: 300px;
+  }
+
+  .gradient-text {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .section-padding {
+    @apply py-20 px-4 md:px-8;
+  }
+}
