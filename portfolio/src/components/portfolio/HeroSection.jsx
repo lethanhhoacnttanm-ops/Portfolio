@@ -27,26 +27,32 @@ const HeroSection = () => {
                 Building beautiful, secure, and playful web experiences.
               </p>
               <div className="flex gap-4 flex-wrap">
-                <Button
-                  type="primary"
-                  size="large"
-                  icon={<DownloadOutlined />}
-                  style={{
-                    borderRadius: 999,
-                    background: "hsl(174, 72%, 44%)",
-                    borderColor: "hsl(174, 72%, 44%)",
-                    fontFamily: "var(--font-body)",
-                    fontWeight: 700,
-                    height: 48,
-                    paddingInline: 32,
-                  }}
+                <a 
+                  href="/CV_LeThanhHoa.pdf" 
+                  download="CV_LeThanhHoa_Fullstack.pdf"
+                  style={{ textDecoration: 'none' }}
                 >
-                  Download CV
-                </Button>
+                  <Button
+                    type="primary"
+                    size="large"
+                    icon={<DownloadOutlined />}
+                    style={{
+                      borderRadius: 999,
+                      background: "hsl(174, 72%, 44%)",
+                      borderColor: "hsl(174, 72%, 44%)",
+                      fontFamily: "var(--font-body)",
+                      fontWeight: 700,
+                      height: 48,
+                      paddingInline: 32,
+                    }}
+                  >
+                    Download CV
+                  </Button>
+                </a>
                 <Button
                   size="large"
                   icon={<GithubOutlined />}
-                  href="https://github.com"
+                  href="https://github.com/lethanhhoacnttanm-ops"
                   target="_blank"
                   style={{
                     borderRadius: 999,

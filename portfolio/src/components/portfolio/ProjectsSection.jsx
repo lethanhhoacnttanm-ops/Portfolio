@@ -8,8 +8,8 @@ const projects = [
     description:
       "A modern bakery & coffee shop website with a delightful UI, product catalog, and ordering system. Built with a focus on responsive design and smooth user experience.",
     tags: ["ReactJS", "Ant Design", "JSON Server", "Tailwind CSS"],
-    github: "https://github.com",
-    live: "#",
+    github: "https://github.com/dieukiet5944/FinalsProject-Ecommerce.git",
+    live: "https://finals-project-ecommerce.vercel.app/",
     gradient: "linear-gradient(135deg, hsl(174, 72%, 44%), hsl(220, 90%, 56%))",
   },
 ];
