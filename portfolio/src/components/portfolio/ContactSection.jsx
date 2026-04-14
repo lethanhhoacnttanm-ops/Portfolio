@@ -34,6 +34,8 @@ const [loading, setLoading] = useState(false);
     } catch (error) {
       message.error("Error");
       console.error(error);
+    } finally {
+       setLoading(false)
     }
   };
 

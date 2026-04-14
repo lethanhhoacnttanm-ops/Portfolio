@@ -28,8 +28,8 @@ const HeroSection = () => {
               </p>
               <div className="flex gap-4 flex-wrap">
                 <a 
-                  href="/CV_LeThanhHoa.pdf" 
-                  download="CV_LeThanhHoa_Fullstack.pdf"
+                  href="/CV_FrontendIntern_LeThanhHoa.pdf" 
+                  download="CV_LeThanhHoa.pdf"
                   style={{ textDecoration: 'none' }}
                 >
                   <Button
